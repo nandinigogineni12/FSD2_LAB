@@ -1,16 +1,13 @@
 "use strict";
 class student {
-    studentname;
-    age;
-    cgpa;
     constructor(name, age, cgpa) {
+        this.display = () => {
+            console.log(`Name: ${this.studentname}, Age: ${this.age}, CGPA: ${this.cgpa}`);
+        };
         this.studentname = name ?? "Nandini";
         this.age = age ?? 19;
         this.cgpa = cgpa ?? 8.5;
     }
-    display = () => {
-        console.log(`Name: ${this.studentname}, Age: ${this.age}, CGPA: ${this.cgpa}`);
-    };
 }
 const student1 = new student();
 student1.display();

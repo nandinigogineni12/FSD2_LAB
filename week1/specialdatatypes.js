@@ -1,7 +1,8 @@
-var flexibleValue = 10;
+"use strict";
+let flexibleValue = 10;
 flexibleValue = "I changed to a string";
 flexibleValue = true;
-var mysteryValue = "hello vishnu";
+let mysteryValue = "hello vishnu";
 if (typeof mysteryValue === "string") {
     console.log("length of unknown string:" + mysteryValue.length);
 }

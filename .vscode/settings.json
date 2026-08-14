@@ -1,0 +1,4 @@
+{
+    "js/ts.implicitProjectConfig.module": "CommonJS",
+    "js/ts.implicitProjectConfig.target": "ES2020"
+}
