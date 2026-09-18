@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <style>
+        .error{color:red;font-weight:bold;}
+        .success{color:green;font-weight:bold;}
+    </style>
+</head>
+<body>
+
+<h1><%= title %></h1>
+
+<form action="/submit" method="POST">
+
+    <label>Name:</label>
+    <input type="text" name="name">
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email">
+    <br><br>
+
+    <label>Password:</label>
+    <input type="password" name="password">
+    <br><br>
+
+    <label>Age:</label>
+    <input type="number" name="age">
+    <br><br>
+
+    <button type="submit">Register</button>
+
+</form>
+
+<% if (error) { %>
+
+    <h3>Errors:</h3>
+
+    <% error.forEach(function(err) { %>
+        <p class="error"><%= err %></p>
+    <% }); %>
+
+<% } %>
+
+<% if (user) { %>
+    <h3 class="success">Welcome, <%= user %>!Your account is successfully set up</h3>
+<% } %>
+
+</body>
+</html>
